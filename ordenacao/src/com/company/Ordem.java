@@ -35,6 +35,8 @@ public class Ordem {
 
     }
 
+    //Método decrescente é a mesma coisa mas trocamos o sinal no IF para colocarmos na ordem inversa:
+
     public String selectionSortDec(int[] array) {
 
         //Primeiro Loop para percorrer o Array.
@@ -68,8 +70,10 @@ public class Ordem {
 
     public String bubbleSort(int[] array) {
 
+        //1º Loop para armazenar os valores maiores no ultimo elemento:
         for (int ultimo = array.length - 1; ultimo > 0; ultimo--) {
 
+            //2º Loop para percorrer o array e fazer as comparações e substituições:
             for (int i = 0; i < ultimo; i++) {
 
                 if (array[i] > array[i+1]) {
@@ -82,6 +86,9 @@ public class Ordem {
 
         return Arrays.toString(array);
     }
+
+
+    //Método decrescente é a mesma coisa mas trocamos o sinal no IF para colocarmos na ordem inversa:
 
     public String bubbleSortDec(int[] array) {
 
@@ -101,8 +108,11 @@ public class Ordem {
     }
 
     public void substituir(int[] array, int i, int j) {
+
+        //Variavel para armazenar o dado e não perder:
         int auxiliar = array[i];
 
+        //Realizando as trocas:
         array[i] = array[j];
         array[j] = auxiliar;
 
